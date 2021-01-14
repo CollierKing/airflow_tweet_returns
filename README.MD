@@ -24,7 +24,7 @@ The diagram of our DAG in Airflow's graph view looks like this:
 Here's our DAG's tree view in Airflow:
 ![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/airflow_tree.png)
 
-When we run our DAG in Airflow, we can checkout the task processing times here.  As you can see our business logic & calculation tasks were executed in paralle.
+When we run our DAG in Airflow, we can checkout the task processing times here.  As you can see our business logic & calculation tasks were executed in parallel.
 ![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/airflow_gantt.png)
 
 ## Airflow Project Structure
@@ -33,11 +33,11 @@ The tree of our Airflow project looks like this:
 
 Our tweet_processing_dag.py file contains our DAG.
 
-Some custom Hooks and Operators are in our Plugins folder.  We have 4 of them needed to do the job:
-1. Google Sheets Plugin - handles pushing the final dataset to the client
-2. Pandas_DB Plugin - handles pushing and pulling Postgres data to and from Pandas
-3. ThinkOrSwim (ToS) Plugin - handles pulling historical stock quotes for the tickers our client tweets
-4. Twitter Plugin - handles pulling our client's tweets from Twitter
+Some custom Hooks and Operators are in our Plugins folder.  We have 4 of them to do the job:
+1. **Google Sheets Plugin** - handles pushing the final dataset to the client
+2. **Pandas_DB Plugin** - handles pushing and pulling Postgres data to and from Pandas
+3. **ThinkOrSwim (ToS) Plugin** - handles pulling historical stock quotes for the tickers our client tweets
+4. **Twitter Plugin** - handles pulling our client's tweets from Twitter
 
 ## Conclusion
 With the help of Airflow's parallel processing, logging, dependency management, builtin connection and plugin extendability capabilities, we were able to create a pretty extensive ETL pipeline for our client.
