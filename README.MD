@@ -1,3 +1,4 @@
+![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/airflow.png)
 # Experimenting with Apache Airflow 
 This repo holds a project to demonstrate my first foray into [Apache Airflow]().  Airflow is perfect for architecting sophisticated and robust ETL processes using Python.  So here goes!
 
@@ -14,12 +15,21 @@ So we have a multi-step data-pipeline with a business logic & computations layer
 The key requirement is the speed of delivering the daily report.  To meet this we will look to execute the business logic & computations layer across parallel tasks.
 
 Our entire pipeline process looks something like this:
+![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/business_diagram.png)
 
-## Airflow Diagram
-The diagram of our DAG in Airflow looks like this:
+## Airflow Diagrams
+The diagram of our DAG in Airflow's graph view looks like this:
+![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/airflow_graph.png)
+
+Here's our DAG's tree view in Airflow:
+![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/airflow_tree.png)
+
+When we run our DAG in Airflow, we can checkout the task processing times here.  As you can see our business logic & calculation tasks were executed in paralle.
+![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/airflow_gantt.png)
 
 ## Airflow Project Structure
 The tree of our Airflow project looks like this:
+![alt text](https://github.com/CollierKing/airflow_tweet_returns/blob/main/docs/img/project_tree.png)
 
 Our tweet_processing_dag.py file contains our DAG.
 
@@ -34,6 +44,6 @@ With the help of Airflow's parallel processing, logging, dependency management, 
 Airflow's UI and modular design make it easy to test, debug and enhance as well.
 
 This is just the beginning of my Airflow journey, hoping to have more pipelines up and running soon!
-
 Checkout the final Google Sheet of Stock Tickers, Returns and Mention Dates here:
+
 https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vSYgMf87bi4i07jgcTAjN630agkAAs_G6Ai2kUQ4k-ar0Qv3dEhfviGF52IYhk3O2j8ZyqXEUz4qAxK/pubhtml
